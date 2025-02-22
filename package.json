@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "format:check": "prettier --check \"tests/**/*.ts\"",
+    "format:fix": "prettier --write \"tests/**/*.ts\"",
+    "lint:check": "eslint \"tests/**/*.ts\"",
+    "lint:fix": "eslint \"tests/**/*.ts\" --fix",
+    "prepare": "husky"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.5",
-    "typescript": "^5.7.3"
+    "eslint": "^9.21.0",
+    "husky": "^9.1.7",
+    "prettier": "3.5.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
   }
 }
