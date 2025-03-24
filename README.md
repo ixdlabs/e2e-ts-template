@@ -37,3 +37,25 @@ pnpm exec playwright codegen
 ```
 
 Happy hacking! 🎭
+
+## locst-testing
+
+Install python dependencies in `requirements.txt`.
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a copy of `.env.example` file with real server values. (The example is configured for keycloak based site testing)
+
+To debug, you can use VS code debug task or run once using,
+
+```bash
+python -m tests.perf.locustfile --host
+```
+
+You can launch locust using
+
+```bash
+locust -f tests/perf/locustfile.py
+```
